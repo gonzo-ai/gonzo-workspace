@@ -1,0 +1,16 @@
+[Unit]
+Description=devault - bookmark vault
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/repos/devault
+ExecStart=/usr/bin/node /home/repos/devault/node_modules/.bin/next start
+Restart=always
+RestartSec=5
+User=root
+StandardOutput=append:/tmp/devault-stdout.log
+StandardError=append:/tmp/devault-stderr.log
+
+[Install]
+WantedBy=multi-user.target
