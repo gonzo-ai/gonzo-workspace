@@ -1,0 +1,7 @@
+# Secrets — never push
+secrets/
+*.pem
+*.key
+.env
+.env.*
+credentials/
